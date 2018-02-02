@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "twitter_data_extraction", "twitter_data_extraction\twitter_data_extraction.pyproj", "{184607A1-DEB1-487C-8CDB-57570FCC2F32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{184607A1-DEB1-487C-8CDB-57570FCC2F32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{184607A1-DEB1-487C-8CDB-57570FCC2F32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A711A133-A64A-4912-ADB6-BF11423535F5}
+	EndGlobalSection
+EndGlobal

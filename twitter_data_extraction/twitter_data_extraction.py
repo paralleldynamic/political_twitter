@@ -7,8 +7,6 @@ from sys import argv
 db = MongoClient('localhost', 27017).political_twitter
 tokens = db.tokens.find_one({'name': 'tokens'})
 
-accounts = ['@SenSanders']
-
 consumer_key = tokens['consumer_key']
 consumer_secret = tokens['consumer_secret']
 access_token = tokens['access_token']

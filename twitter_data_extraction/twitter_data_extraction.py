@@ -21,23 +21,22 @@ def extract_tweets(handle):
 
     tweets = []
     
-    tweet_batch = api.user_timeline(screen_name=handle,count=10)
+    tweet_batch = api.user_timeline(screen_name=handle,count=200)
     tweets.extend(tweet_batch)
     oldest = tweets[-1].id - 1
 
-#    while len(tweet_batch) > 0:
-#        tweet_batch = api.user_timeline(screen_name=handle,count=200,max_id=oldest)
-#        tweets.extend(tweet_batch)
-#        oldest = tweets[-1].id - 1
+    while len(tweet_batch) > 0:
+        tweet_batch = api.user_timeline(screen_name=handle,count=200,max_id=oldest)
+        tweets.extend(tweet_batch)
+        oldest = tweets[-1].id - 1
     return tweets
 
 def save_tweets(tweets, db_name):
     collection = db[db_name]
 
     for tweet in tweets:
-        tweet_data = json.dumps(tweet._json)
-        collection.insert(tweet_data)
+        collection.insert(tweet._json)
 
 if __name__ == '__main__':
-    tweets = extract_tweets('SenSanders')
-    save_tweets(tweets, 'bernie_sanders')
+    tweets = extract_tweets(argv[1])
+    save_tweets(tweets, argv[2])
